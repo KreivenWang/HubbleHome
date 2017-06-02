@@ -1,12 +1,12 @@
 <template>
   <li @mouseenter="showSubMenu" @mouseleave="hideSubMenu" class="nav-menu-wrap">
     <a :href="menuUrl">
-      {{menuName}}
+      {{ menuName }}
     </a>
     <transition name="drop-down">
       <ul v-if="isShowSubMenu" @mouseenter="keepSubMenu" @mouseleave="noKeepSubMenu" class="submenu-wrap">
         <li v-for="subMenu in subMenus" class="submenu-item-wrap">
-          <a class="submenu-item">{{subMenu.nameVar}}</a>
+          <a class="submenu-item">{{ $t(subMenu.nameVar) }}</a>
         </li>
       </ul>
     </transition>
@@ -65,7 +65,7 @@ export default {
 
 .submenu-wrap {
   border-top: solid 2px var(--themeColor);
-  width: 100px;
+  width: 120px;
   -webkit-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.25);
   box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.15);
@@ -137,7 +137,7 @@ export default {
 .submenu-wrap::before {
   position: absolute;
   top: -16px;
-  left: 45px;
+  left: 42px;
 
   border: solid transparent;
   content: " ";

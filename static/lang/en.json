@@ -1,0 +1,24 @@
+{
+  "en": {
+    "title": "Hubble Technologies",
+    "shorttitle": "Hubble",
+    "purpose": "For Better Secure Resolution",
+    "copyright": "©2017 Hubble Technologies",
+    "menu": {
+      "home": "home",
+      "product": "product",
+      "coop": "coop",
+      "news": "news",
+      "contact": "contact",
+      "language": "中文"
+    },
+    "submenu": {
+      "product1": "PRODUCT - #1",
+      "product2": "PRODUCT - #2",
+      "product3": "PRODUCT - #3",
+      "news1": "NEWS 1",
+      "news2": "NEWS 2"
+    },
+    "more": "More"
+  }
+}

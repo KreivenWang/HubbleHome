@@ -1,0 +1,46 @@
+[
+    {
+        "url": "product",
+        "path": "home-product",
+        "nameVar": "menu.product",
+        "subMenus": [
+            {
+                "url": "product1",
+                "nameVar": "submenu.product1"
+            },
+            {
+                "url": "product2",
+                "nameVar": "submenu.product2"
+            },
+            {
+                "url": "product3",
+                "nameVar": "submenu.product3"
+            }
+        ]
+    },
+    {
+        "url": "news",
+        "path": "home-news",
+        "nameVar": "menu.news",
+        "subMenus": [
+            {
+                "url": "news1",
+                "nameVar": "submenu.news1"
+            },
+            {
+                "url": "news2",
+                "nameVar": "submenu.news2"
+            }
+        ]
+    },
+    {
+        "url": "coop",
+        "path": "home-coop",
+        "nameVar": "menu.coop"
+    },
+    {
+        "url": "contact",
+        "path": "home-contact",
+        "nameVar": "menu.contact"
+    }
+]

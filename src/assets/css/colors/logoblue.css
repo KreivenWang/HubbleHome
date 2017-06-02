@@ -1,0 +1,126 @@
+/* --------------------------------------
+
+Color Name: logoblue
+Color Code : #4677F8
+
+----------------------------------------- */
+
+:root {
+    --themeColor: #4677F8;
+}
+
+.color-background-second {
+    background-color: #4677F8;
+}
+
+.line {
+    background: #4677F8;
+}
+
+.line-two {
+    background: #ffffff;
+}
+
+strong {
+    color: #4677F8;
+}
+
+.colored-text {
+    color: #4677F8 !important;
+}
+
+.color-background {
+    background: #1B1B1B;
+    ;
+}
+
+a {
+    color: #4677F8;
+}
+
+.navbar-toggle {
+    border: none !important;
+    background-color: #4677F8 !important;
+}
+
+.navbar-toggle:hover {
+    background-color: #4677F8 !important;
+}
+
+.non-sticky .navbar-nav>li>a:hover {
+    color: #4677F8;
+}
+
+.standard-button {
+    background: #4677F8;
+    border: 1px solid #fff !important;
+    border-radius: 1px !important;
+}
+
+.standard-button:hover {
+    opacity: 0.8;
+}
+
+.secondary-button:hover {
+    opacity: 0.8;
+}
+
+.sticky-navigation .main-navigation .current a:not(.external) {
+    color: #4677F8 !important;
+    border-color: #4677F8 !important;
+}
+
+.sticky-navigation .navbar-nav>li>a:hover {
+    color: #4677F8;
+}
+
+.feature-list li .icon-custom {
+    background: #4677F8;
+    border: 1px solid #fff;
+}
+
+.feature {}
+
+.feature .icon {
+    color: #4677F8;
+    border: 2px solid #4677F8;
+}
+
+.package {
+    border-top: 3px solid #fff;
+}
+
+.package-center {
+    border-top: 3px solid #fff;
+}
+
+.input-box:active,
+.textarea-box:active,
+.input-box:focus,
+.textarea-box:focus {
+    border-left: 2px solid #4677F8 !important;
+}
+
+.portfolio .owl-theme .owl-controls .owl-page span {
+    background: #fff;
+}
+
+.social-icons li a {
+    background-color: #4677F8;
+    padding: 2px 5px;
+}
+
+.social-icons li a:hover {
+    color: #ffffff;
+}
+
+.subMenu li {
+    border-top: 1px solid #4677F8;
+}
+
+.subMenu li a:hover {
+    color: #4677F8;
+}
+
+
+/*# sourceMappingURL=alizarin.css.map */

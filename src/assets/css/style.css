@@ -262,54 +262,6 @@ h6 {
 }
 
 
-
-/*---------------------------------------
-   Header              
------------------------------------------*/
-.welcome {
-	background: url('../bg-image-header.jpg') no-repeat center top fixed;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-.mask {
-	background-image: url('../putihjaring.png');
-	width: 100%;
-	height: 100%;
-	left: 0px;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-}
-.container-header {
-	padding-top: 47px;
-	padding-bottom: 30px;
-}
-
-
-.distance-header {
-	margin-top: 100px;
-	margin-bottom: 137px;
-}
-
-.distance-header .sub-heading {
-    font-size: 20px;
-    padding-right: 10%;
-    padding-left: 10%;
-    color: #ffffff;
-    margin-top: 40px;
-    line-height: 30px;
-}
-
-.distance-button {
-    margin-top: 75px;
-    margin-bottom: 25px;
-}
-
-.navbar-header img {
-	max-height: 26px;
-}
-
-
 /*---------------------------------------
    Navigation       
 -----------------------------------------*/

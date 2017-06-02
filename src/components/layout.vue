@@ -2,7 +2,6 @@
   <div>
     <!-- Over color Image -->
     <div class="background-overlay">
-  
       <div class="container-header mask">
   
         <!-- Sticky Navigation -->
@@ -17,23 +16,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <!--<a class="navbar-brand" href="#"><img src="images/logos.png" alt=""></a>-->
-              <a class="navbar-brand" href="#">
-                <span style="color:white;font-weight:bold;font-size:28px">TITLE</span>
+              <a class="navbar-brand" href="">
+                <span class="logo-text">
+                  <img class="logo-img" src="../assets/logo.png" alt="">{{ $t('title') }}</span>
+                  <!--<img src="../assets/logo_full.jpg" alt="Hubble">-->
               </a>
-  
             </div>
             <!-- Navigation Menu -->
             <div class="navbar-collapse collapse" id="men-navigation">
-              <ul class="nav navbar-nav navbar-right main-navigation" v-one-page-nav>
+              <ul class="nav navbar-nav navbar-right main-navigation">
                 <li>
-                  <a href="home">HOME</a>
+                  <a href="/">{{ $t("menu.home") }}</a>
                 </li>
+                <nav-menu-item key="m1" v-for="menu in menuList" :menu-name="$t(menu.nameVar)" :menu-url="menu.url" :sub-menus="menu.subMenus"></nav-menu-item>
                 <li>
-                </li>
-                <nav-menu-item key="m1" v-for="menu in menuList" :menu-name="menu.nameVar" :menu-url="menu.url" :sub-menus="menu.subMenus"></nav-menu-item>
-                <li>
-                  <a href="javascript:void(0);">LANGUAGE</a>
+                  <a @click="changeLang">{{ $t("menu.language") }}</a>
                 </li>
               </ul>
             </div>
@@ -47,7 +44,7 @@
       </div>
     </div>
     <div>content</div>
-    <div>©2017 Hubble - Safe Intelligence
+    <div>{{ $t('copyright') }}
       <a href="#" title="返回顶部">返回顶部</a>
     </div>
   </div>
@@ -73,59 +70,17 @@ export default {
   data() {
     return {
       x: 'world',
-      menuList: [
-        {
-          'url': '#product',
-          'path': 'home-product',
-          'nameVar': 'PRODUCT',
-          'subMenus': [
-            {
-              'url': '#product1',
-              'nameVar': '安全维护'
-            },
-            {
-              'url': '#product1',
-              'nameVar': '安全检索'
-            },
-            {
-              'url': '#product1',
-              'nameVar': '安全服务'
-            }
-          ]
-        },
-        {
-          'url': '#coop',
-          'path': 'home-coop',
-          'nameVar': 'COOP',
-          'subMenus': [
-            {
-              'url': '#product1',
-              'nameVar': '安全维护'
-            },
-            {
-              'url': '#product1',
-              'nameVar': '安全检索'
-            },
-            {
-              'url': '#product1',
-              'nameVar': '安全服务'
-            }
-          ]
-        },
-        {
-          'url': 'news',
-          'path': 'home-news',
-          'nameVar': 'NEWS'
-        },
-        {
-          'url': 'contact',
-          'path': 'home-contact',
-          'nameVar': 'CONTACT'
-        }
-      ]
+      menuList: []
     };
   },
   methods: {
+    changeLang() {
+      if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'zh';
+      } else {
+        this.$i18n.locale = 'en';
+      }
+    },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     }
@@ -145,11 +100,39 @@ export default {
         // });
       }
     }
+  },
+  created() {
+    this.$http.get('/static/menu.json')
+      .then((response) => {
+        this.menuList = response.data;
+      })
+      .catch((error) => {
+        console.log('get menu failed: ' + error);
+      });
   }
 };
 </script>
 
 <style>
-@import url('../assets/css/colors/steelblue.css');
+@import url('../assets/css/colors/logoblue.css');
 @import url('../assets/css/style.css');
+
+.navbar-header img {
+	max-height: 26px;
+}
+
+.logo-img {
+  -transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  margin: 1px 25px 1px 1px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 28px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  /*letter-spacing: 1px;*/
+}
 </style>
