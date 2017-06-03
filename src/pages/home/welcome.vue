@@ -4,16 +4,16 @@
     <div class="container mask">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 distance-header">
-          <transition-group name="left-in">
-            <h1 v-show="isShowAni1" key="1" class="titlepurpose">
+          <transition-group name="top-in">
+            <h1 v-if="isShowAni1" key="1" class="titlepurpose">
               <strong>{{ $t('shorttitle') }}</strong> -
               <span>{{ $t('purpose') }}</span>
             </h1>
-            <div v-show="isShowAni2" class="line" key="2"></div>
-            <p v-show="isShowAni3" class="sub-heading" key="3">
+            <div v-if="isShowAni2" class="line" key="2"></div>
+            <p v-if="isShowAni3" class="sub-heading" key="3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, facere eum corporis aliquam qui suscipit eius odio maiores inventore sit. Reprehenderit nulla explicabo repellendus maxime! Excepturi quam quibusdam dolore vel.
             </p>
-            <div v-show="isShowAni4" id="call_to_action-5" class="distance-button" key="4">
+            <div v-if="isShowAni4" id="call_to_action-5" class="distance-button" key="4">
               <a href="#section-about" class="btn standard-button">{{ $t('more') }}</i>
               </a>
             </div>
@@ -52,14 +52,14 @@ export default {
 </script>
 
 <style scoped>
-.left-in-enter-active,
-.left-in-leave-active {
-  transition: all 1s ease-in-out;
+.top-in-enter-active,
+.top-in-leave-active {
+  transition: all 1s ease-out;
 }
 
-.left-in-enter {
+.top-in-enter {
   transform: translateY(-10px);
-  opacity: 0;
+  opacity: 0.1;
 }
 
 .titlepurpose {
@@ -70,7 +70,6 @@ export default {
   background: url('../../assets/bg-image-header.jpg') no-repeat center top fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  min-height: 768px;
 }
 
 .mask {
@@ -81,17 +80,18 @@ export default {
   top: 0px;
   bottom: 0px;
   right: 0px;
-  min-height: 768px;
+  min-height: 50rem;
 }
 
 .container-header {
   padding-top: 47px;
   padding-bottom: 30px;
+  min-height: 50rem;
 }
 
 
 .distance-header {
-  margin-top: 100px;
+  margin-top: 18rem;
   margin-bottom: 137px;
 }
 
@@ -107,5 +107,10 @@ export default {
 .distance-button {
   margin-top: 75px;
   margin-bottom: 25px;
+}
+
+.line {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 </style>

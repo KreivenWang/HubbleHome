@@ -19,7 +19,7 @@
               <a class="navbar-brand" href="">
                 <span class="logo-text">
                   <img class="logo-img" src="../assets/logo.png" alt="">{{ $t('title') }}</span>
-                  <!--<img src="../assets/logo_full.jpg" alt="Hubble">-->
+                <!--<img src="../assets/logo_full.jpg" alt="Hubble">-->
               </a>
             </div>
             <!-- Navigation Menu -->
@@ -37,6 +37,8 @@
           </div>
         </div>
         <home-welcome></home-welcome>
+        <swiper></swiper>
+          <!--<swiper-slide>I'm Slide 1</swiper-slide>-->
         <!-- End Sticky Navigation -->
         <section class="section-lv1" v-for="(menu, index) in menuList" :class="{'color-background-second': index % 2 === 0}">
           <div :is="menu.path"></div>
@@ -51,15 +53,18 @@
 </template>
 
 <script>
-import navMenuItem from '../components/navMenuItem';
+import navMenuItem from './navMenuItem';
+import swiper from './swiper';
+
 import homeWelcome from '../pages/home/welcome';
 import homeContact from '../pages/home/contact';
 import homeCoop from '../pages/home/coop';
 import homeNews from '../pages/home/news';
 import homeProduct from '../pages/home/product';
-// import $ from 'jquery';
+
 export default {
   components: {
+    swiper,
     navMenuItem,
     homeWelcome,
     homeContact,
@@ -69,7 +74,6 @@ export default {
   },
   data() {
     return {
-      x: 'world',
       menuList: []
     };
   },
@@ -118,7 +122,7 @@ export default {
 @import url('../assets/css/style.css');
 
 .navbar-header img {
-	max-height: 26px;
+  max-height: 26px;
 }
 
 .logo-img {
@@ -131,8 +135,8 @@ export default {
 .logo-text {
   color: white;
   font-size: 28px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bolder;
+  font-family: 'Source Sans Pro', '华文细黑', sans-serif;
+  font-weight: 500px;
   /*letter-spacing: 1px;*/
 }
 </style>

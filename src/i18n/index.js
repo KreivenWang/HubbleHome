@@ -37,6 +37,6 @@ let getLangPack = () => {
 };
 
 export default new VueI18n({
-  locale: 'zh',
+  locale: 'en',
   messages: getLangPack()
 });

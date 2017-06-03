@@ -65,7 +65,7 @@ export default {
 
 .submenu-wrap {
   border-top: solid 2px var(--themeColor);
-  width: 120px;
+  width: 150px;
   -webkit-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.25);
   box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.15);
@@ -104,7 +104,7 @@ export default {
   display: block;
   line-height: 1.2;
   letter-spacing: 0px;
-  font-family: 'Microsoft YaHei', sans-serif;
+  font-family: 'Source Sans Pro', '华文细黑', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 350;
@@ -118,15 +118,7 @@ export default {
 }
 
 .submenu-item:hover {
-  font-family: 'Microsoft YaHei', sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 350;
   color: var(--themeColor);
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 10px;
-  text-decoration: none
 }
 
 .submenu-item:hover a,

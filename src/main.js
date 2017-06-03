@@ -5,8 +5,8 @@ import iView from 'iview';
 import axios from 'axios';
 
 import Layout from './components/layout';
-import i18n from './i18n';
 import router from './router';
+import i18n from './i18n';
 
 import 'iview/dist/styles/iview.css';
 import './assets/css/bootstrap.min.css';
