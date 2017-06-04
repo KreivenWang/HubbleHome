@@ -26,7 +26,7 @@
             <div class="navbar-collapse collapse" id="men-navigation">
               <ul class="nav navbar-nav navbar-right main-navigation">
                 <li>
-                  <a href="/">{{ $t("menu.home") }}</a>
+                  <a href="">{{ $t("menu.home") }}</a>
                 </li>
                 <nav-menu-item key="m1" v-for="menu in menuList" :menu-name="$t(menu.nameVar)" :menu-url="menu.url" :sub-menus="menu.subMenus"></nav-menu-item>
                 <li>
@@ -47,7 +47,7 @@
     </div>
     <div>content</div>
     <div>{{ $t('copyright') }}
-      <a href="#" title="返回顶部">返回顶部</a>
+      <a href="" title="返回顶部">返回顶部</a>
     </div>
   </div>
 </template>
