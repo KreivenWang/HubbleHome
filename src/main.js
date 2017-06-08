@@ -9,8 +9,11 @@ import router from './router';
 import i18n from './i18n';
 
 import 'iview/dist/styles/iview.css';
+
+// 暂时不用bootstrap
 import './assets/css/bootstrap.min.css';
 import './assets/js/bootstrap.min';
+
 // import onePageNav from './plugins/onePageNav.js';
 
 Vue.config.productionTip = false;

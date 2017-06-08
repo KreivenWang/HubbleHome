@@ -112,17 +112,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 @import url("../assets/css/swiper-3.4.2.min.css");
-
+@import '../assets/css/consts.scss';
 
 .swiper-container {
-  widows: 768px;
-  height: 768px;
+  widows: $pageMinHeight;
+  height: $pageMinHeight;
 }
 
 .gallery-top {
-  height: 32rem;
+  height: 100%;
   width: 100%;
 }
 
