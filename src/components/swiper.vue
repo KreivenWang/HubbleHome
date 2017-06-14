@@ -1,32 +1,35 @@
 <template>
   <div>
     <!--<div v-on:mouseenter="stopPlay()" v-on:mouseleave="play()" class="swiper-container gallery-top swiper-container-horizontal">
-                            <div class="swiper-wrapper">
-                              <div v-for="item in slides" class="swiper-slide swiper-slide-next" style="width: 100%; margin-right: 10px;" :style="{backgroundImage: 'url(' + item.img + ')'}">
-                              </div>
-                            </div>
-                            <div class="swiper-button-next swiper-button-white"></div>
-                            <div class="swiper-button-prev swiper-button-white swiper-button-disabled"></div>
-                          </div>
-                          <div class="swiper-container gallery-thumbs swiper-container-horizontal">
-                            <div class="swiper-wrapper">
-                              <div v-for="item in slides" class="swiper-slide swiper-slide-next" style="margin-right: 10px;" :style="{backgroundImage: 'url(' + item.img + ')'}">
-                              </div>
-                            </div>
-                          </div>-->
+                                                  <div class="swiper-wrapper">
+                                                    <div v-for="item in slides" class="swiper-slide swiper-slide-next" style="width: 100%; margin-right: 10px;" :style="{backgroundImage: 'url(' + item.img + ')'}">
+                                                    </div>
+                                                  </div>
+                                                  <div class="swiper-button-next swiper-button-white"></div>
+                                                  <div class="swiper-button-prev swiper-button-white swiper-button-disabled"></div>
+                                                </div>
+                                                <div class="swiper-container gallery-thumbs swiper-container-horizontal">
+                                                  <div class="swiper-wrapper">
+                                                    <div v-for="item in slides" class="swiper-slide swiper-slide-next" style="margin-right: 10px;" :style="{backgroundImage: 'url(' + item.img + ')'}">
+                                                    </div>
+                                                  </div>
+                                                </div>-->
   
     <div class="swiper-container" v-on:mouseenter="stopPlay()" v-on:mouseleave="play()">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in slides" :style="{backgroundImage: 'url(' + item.img + ')'}">
-          <!--<img class="slide-img" :src="item.img" alt=" ">-->
+          <div class="text-wrapper">
+            <h1>{{item.title}}</h1>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+          </div>
         </div>
       </div>
       <!-- 如果需要分页器 -->
-      <!--<div class="swiper-pagination"></div>-->
+      <div class="swiper-pagination swiper-pagination-white"></div>
   
       <!-- 如果需要导航按钮 -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
   
       <!-- 如果需要滚动条 -->
       <!--<div class="swiper-scrollbar"></div>-->
@@ -44,11 +47,14 @@ export default {
       x: 'world',
       slides: [
         {
-          'img': require('../assets/lb1.jpg')
+          img: require('../assets/lb1.jpg'),
+          title: 'Culture'
         }, {
-          'img': require('../assets/lb4.jpg')
+          img: require('../assets/lb4.jpg'),
+          title: 'Introduction'
         }, {
-          'img': require('../assets/lb5.jpg')
+          img: require('../assets/lb5.jpg'),
+          title: 'Purpose'
         }
       ],
       mySwiper: null
@@ -83,7 +89,12 @@ export default {
         loop: true,
 
         // 如果需要分页器
-        // pagination: '.swiper-pagination',
+        pagination: '.swiper-pagination',
+        // paginationType: 'custom',
+        // paginationCustomRender: function (swiper, current, total) {
+        //   return current + ' of ' + total;
+        // },
+        paginationClickable: true,
 
         // 如果需要前进后退按钮
         nextButton: '.swiper-button-next',
@@ -92,8 +103,8 @@ export default {
         // 如果需要滚动条
         // scrollbar: '.swiper-scrollbar',
 
-        autoplay: 3000, //可选选项，自动滑动
-        grabCursor: true,
+        //autoplay: 3000, //可选选项，自动滑动
+        // grabCursor: true,
         initialSlide: 1
       });
     },
@@ -102,7 +113,7 @@ export default {
       // galleryThumbs.stopAutoplay();
     },
     play() {
-      this.mySwiper.startAutoplay();
+      //this.mySwiper.startAutoplay();
       // galleryThumbs.startAutoplay();
     }
   },
@@ -117,37 +128,51 @@ export default {
 @import '../assets/css/consts.scss';
 
 .swiper-container {
-  widows: $pageMinHeight;
-  height: $pageMinHeight;
+  height: $screenHeight;
 }
 
-.gallery-top {
-  height: 100%;
-  width: 100%;
-}
-
-.gallery-thumbs {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-  background: rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-
-.gallery-thumbs .swiper-slide {
-  width: 30%;
-  height: 6rem;
-  opacity: 0.3;
-}
-
-.gallery-thumbs .swiper-slide-active {
-  opacity: 1;
-}
-
+// .gallery-top {
+//   height: 100%;
+//   width: 100%;
+// }
+// .gallery-thumbs {
+//   height: 20%;
+//   box-sizing: border-box;
+//   padding: 10px 0;
+//   background: rgba(0, 0, 0, 0.4);
+//   cursor: pointer;
+// }
+// .gallery-thumbs .swiper-slide {
+//   width: 30%;
+//   height: 6rem;
+//   opacity: 0.3;
+// }
+// .gallery-thumbs .swiper-slide-active {
+//   opacity: 1;
+// }
 .swiper-slide {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
+  position: relative;
+
+  div.text-wrapper {
+    top: 40%;
+    left: 15%;
+    position: absolute;
+    // background: rgba(30, 30, 30, 0.3);
+
+    h1 {
+      color: $themeColor1;
+      font-weight: bold;
+    }
+
+    h3 {
+      width: 500px;
+      color: $white1;
+      line-height: 32px;
+    }
+  }
 }
 </style>

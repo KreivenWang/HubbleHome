@@ -1,82 +1,21 @@
 <template>
-  <!-- Section About -->
   <div class="container">
-  
-    <h2>PRODUCT</h2>
-    <div class="line-two">
+    <h2 class="title">PRODUCT</h2>
+    <div class="line">
     </div>
   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae libero quas rem nesciunt fugit cumque temporibus molestiae commodi totam delectus, eaque id, nostrum nemo eos natus. Numquam, eius, consequatur?
-    </p>
-  
-    <div class="row">
-  
-      <div class="col-md-6">
-  
-        <div class="about text-left">
-  
-          <!-- Features List -->
-          <ul class="feature-list">
-  
-            <li>
-              <!-- Icons -->
-              <div class="icon-custom pull-left">
-                <i class="fa fa-laptop"></i>
-              </div>
-              <!-- Detailt Post-->
-              <div class="details pull-left">
-                <h6>Responsive</h6>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod cumque optio, placeat nemo perferendis. Enim modi officiis eligendi obcaecati dicta eum iure, nemo explicabo nihil consectetur, quaerat ullam repellat dignissimos.
-                </p>
-              </div>
-            </li>
-  
-            <li>
-              <!-- Icons -->
-              <div class="icon-custom pull-left">
-                <i class="fa fa-link"></i>
-              </div>
-              <!-- Details Post -->
-              <div class="details pull-left">
-                <h6>Easy Edit</h6>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus sunt ut voluptatem ipsam nulla dolores, quod, tempore, impedit nam cumque quia corporis ullam consequuntur eligendi cupiditate similique aliquid fuga!
-                </p>
-              </div>
-            </li>
-  
-            <li>
-              <!-- Icons -->
-              <div class="icon-custom pull-left">
-                <i class="fa fa-smile-o"></i>
-              </div>
-              <!-- Detail Post -->
-              <div class="details pull-left">
-                <h6>99000 Million Fans</h6>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur nihil nisi modi minus fugit, expedita fugiat tenetur porro at facere atque id harum obcaecati rem laudantium repellat non, ea fuga!
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-  
-      <div class="col-md-6">
-        <!-- Images -->
-        <div class="side-images pull-right">
-          <img src="../../assets/pro.png" alt="Feature" class="img-responsive">
-        </div>
-      </div>
-  
+    <div class="sub-heading">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </div>
-  
+    <swiper class="swiper"></swiper>
   </div>
 </template>
 <script>
+import swiper from '../../components/swiper';
 export default {
+  components: {
+    swiper
+  },
   data() {
     return {
       x: 'world'
@@ -86,6 +25,18 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+@import '../../assets/css/consts.scss';
 
+div.line {
+  margin: 15px auto;
+}
+
+.swiper{
+  margin: 15px auto;
+}
+
+.container {
+  // height: $screenHeight;
+}
 </style>

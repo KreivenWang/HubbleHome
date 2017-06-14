@@ -4,13 +4,15 @@ $articleFont: 'Source Sans Pro',
 '华文细黑',
 sans-serif;
 $controlFont: 'Raleway',
+'华文细黑',
 sans-serif;
-$primaryColor: #4677F8;
-$secondaryColor: #333;
-$navbarBackground: rgba(35, 35, 35, 0.85);
-$backgroundColor: #1B1B1B;
-$whiteFontColor: #EEE;
-$pageMinHeight: 37rem;
+$themeColor1: #4677F8;
+$themeColor2: #5788F8;
+$black1: #1B1B1B;
+$black2: #333;
+$white1: #EEE;
+$screenWidth: 1200px;
+$screenHeight: 800px;
 //$transforming: translate/translateX.../scale
 @mixin transform ($transforming) {
     -webkit-transform: $transforming;
@@ -20,51 +22,58 @@ $pageMinHeight: 37rem;
 
 //$shadow : 投影方式 X轴偏移量 Y轴偏移量阴影模糊半径 阴影扩展半径 阴影颜色
 @mixin box-shadow($shadow) {
-    -moz-box-shadow: $shadow; //Firefox4.0-
     -webkit-box-shadow: $shadow; //Safariand Google chrome10.0-  
+    -moz-box-shadow: $shadow; //Firefox4.0-
     box-shadow: $shadow; //Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9  
 }
 
 @mixin transition($trans) {
-    -moz-transition: $trans;
     -webkit-transition: $trans;
+    -moz-transition: $trans;
     transition: $trans;
+}
+
+@mixin background-size($bgsize) {
+    -webkit-background-size: $bgsize;
+    -moz-transition: $bgsize;
+    background-size: $bgsize;
 }
 
 h2.title {
     text-align: center;
-    color: $whiteFontColor;
+    color: $white1;
 }
 
 div.line {
-    background: $primaryColor;
+    background: $themeColor1;
     height: 2px;
     width: 100px;
     margin: 5px auto;
 }
 
 .sub-heading {
-    color: $whiteFontColor;
+    color: $white1;
     text-align: center;
 }
 
 .standard-button {
-    padding: 10px 25px;
-    margin: 5px;
+    padding: 10px;
+    margin: 15px auto;
     font-family: $controlFont;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 0 !important;
-    border: 1px solid $primaryColor;
+    border: 1px solid $white1;
     line-height: inherit;
-    -webkit-transition: all ease 0.25s;
-    transition: all ease 0.25s;
-    color: $primaryColor;
-    background: transparent;
+    color: $white1;
+    background: $themeColor1;
+    display: block;
+    width: 75px;
+    text-align: center;
+    cursor: pointer;
+    @include transition(all ease 0.25s);
     &:hover {
-        color: $whiteFontColor;
-        border-color: $whiteFontColor;
-        background: $primaryColor;
+        background: $themeColor2;
     }
 }

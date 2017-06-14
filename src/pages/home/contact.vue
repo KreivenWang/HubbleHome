@@ -54,30 +54,28 @@ export default {
 @import '../../assets/css/consts.scss';
 
 div.container {
-  height: $pageMinHeight / 2;
+  height: $screenHeight / 2;
 }
 
 div.line {
   margin: 15px auto;
 }
 
-
-
 .left-part {
   margin-top: 25px;
-  color: $whiteFontColor;
+  color: $white1;
 
 
   p {
     font-weight: bold;
     margin: 0;
     padding: 0;
-    color: $whiteFontColor;
+    color: $white1;
   }
   img {
     width: 128px;
     margin: 5px auto;
-    box-shadow: 1px 1px 8px $primaryColor;
+    box-shadow: 1px 1px 8px $themeColor1;
     border: 2px solid gray;
   }
 
@@ -97,7 +95,7 @@ div.line {
     text-align: center;
     margin: 0;
     padding: 0;
-    color: $whiteFontColor;
+    color: $white1;
   }
   img {
     height: 250px;
@@ -105,7 +103,7 @@ div.line {
     margin-bottom: 40px;
     margin-right: 0;
     margin-left: 40px;
-    box-shadow: 1px 1px 8px $primaryColor;
+    box-shadow: 1px 1px 8px $themeColor1;
     opacity: 0.85;
     // border: 2px solid gray;
     border-radius: 5px;

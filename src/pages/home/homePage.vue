@@ -2,6 +2,7 @@
   <div>
     <welcome></welcome>
     <swiper></swiper>
+    <!--<product></product>-->
     <contact></contact>
     <div class="app-foot">{{ $t('copyright') }}
       <router-link to="/">{{ $t('backtotop') }}</router-link>
@@ -9,13 +10,15 @@
   </div>
 </template>
 <script>
-import swiper from '@/components/swiper';
+import swiper from '../../components/swiper';
+import product from './product';
 import welcome from './welcome';
 import contact from './contact';
 
 export default {
   components: {
     swiper,
+    product,
     welcome,
     contact
   },
@@ -32,7 +35,7 @@ export default {
 @import '../../assets/css/consts.scss';
 
 swiper {
-  height: $pageMinHeight;
+  height: $screenHeight;
 }
 
 .app-foot {
@@ -44,13 +47,13 @@ swiper {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: normal;
-  color: $whiteFontColor;
+  color: $white1;
   a {
-    color: $primaryColor;
+    color: $themeColor1;
     padding-left: 5px;
     text-decoration: none;
     &:hover {
-      color: $whiteFontColor;
+      color: $white1;
     }
   }
 }

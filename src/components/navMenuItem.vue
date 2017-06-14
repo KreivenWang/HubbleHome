@@ -65,7 +65,7 @@ export default {
   position: relative;
 
   ul {
-    border-top: solid 2px $primaryColor;
+    border-top: solid 2px $themeColor1;
     width: 150px;
     @include box-shadow(5px 5px 10px -2px rgba(0, 0, 0, 0.25));
     z-index: 1002;
@@ -88,7 +88,7 @@ export default {
         font-family: $controlFont;
         font-size: 14px;
         text-transform: uppercase;
-        color: $whiteFontColor;
+        color: $white1;
         margin: 0;
         text-decoration: none;
 
@@ -98,7 +98,7 @@ export default {
         }
 
         &:hover {
-          color: $primaryColor;
+          color: $themeColor1;
         }
       }
     }
@@ -113,7 +113,7 @@ export default {
       height: 0;
       width: 0;
       pointer-events: none;
-      border-bottom-color: $primaryColor;
+      border-bottom-color: $themeColor1;
       border-width: 8px;
       margin-left: -8px;
     }

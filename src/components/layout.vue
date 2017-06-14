@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <div class="app-head">
       <div>
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -122,9 +122,9 @@ html {
   font-size: 100%;
 }
 
-body {
+.app {
   // padding-top: 75px;
-  background: $backgroundColor;
+  background: $black1;
 }
 
 .app-head {
@@ -143,7 +143,7 @@ body {
     height: $barHeight;
     padding: ($barHeight - $logoSize)/2;
     font-size: 26px;
-    color: $whiteFontColor;
+    color: $white1;
 
     img {
       width: $logoSize;
@@ -160,14 +160,14 @@ body {
       font-size: 14px;
       font-weight: normal;
       text-transform: uppercase;
-      color: $whiteFontColor!important;
+      color: $white1!important;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
     }
     a:hover {
-      color: $primaryColor!important;
-      border-left: 1px solid $primaryColor;
-      border-right: 1px solid $primaryColor;
+      color: $themeColor1!important;
+      border-left: 1px solid $themeColor1;
+      border-right: 1px solid $themeColor1;
     }
   }
 }

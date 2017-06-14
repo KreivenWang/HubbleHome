@@ -5,19 +5,18 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1 distance-header">
           <transition-group name="top-in">
-            <h1 v-if="isShowAni1" key="1">
+            <h1 v-show="isShowAni1" key="1">
               <strong>{{ $t('shorttitle') }}</strong>
               <span> - {{ $t('purpose') }}</span>
             </h1>
-            <div v-if="isShowAni2" class="line" key="2"></div>
-            <p v-if="isShowAni3" class="sub-heading" key="3">
+            <div v-show="isShowAni2" class="line" key="2"></div>
+            <p v-show="isShowAni3" class="sub-heading" key="3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, facere eum corporis aliquam qui suscipit eius odio maiores inventore sit. Reprehenderit nulla explicabo repellendus maxime! Excepturi quam quibusdam dolore vel.
             </p>
-            <div v-if="isShowAni4" class="distance-button" key="4">
+            <div v-show="isShowAni4" class="distance-button" key="4">
               <p>
                 <a class="btn btn-lg standard-button" href="/product" role="button">{{ $t('more') }}</a>
               </p>
-              </a>
             </div>
           </transition-group>
         </div>
@@ -70,7 +69,7 @@ export default {
 }
 
 .jumbotron {
-  min-height: $pageMinHeight;
+  height: $screenHeight;
   margin: 0;
   padding: 0;
   background: url('../../assets/bg-image-header.jpg') no-repeat center top fixed;
@@ -79,7 +78,7 @@ export default {
   text-align: center;
 
   div.mask {
-    min-height: $pageMinHeight;
+    height: $screenHeight;
     background-image: url('../../assets/dotmask.png');
     width: 100%;
     height: 100%;
@@ -91,13 +90,13 @@ export default {
 
   h1 {
     font-size: 48px;
-    color: $whiteFontColor;
-    margin-top: 75px*2;
+    color: $white1;
+    margin-top: $screenHeight / 2 - 250px;
     strong {
-      color: $primaryColor;
+      color: $themeColor1;
     }
     span {
-      color: $whiteFontColor;
+      color: $white1;
     }
   }
 
@@ -106,7 +105,7 @@ export default {
   }
 
   p.sub-heading {
-    color: $whiteFontColor;
+    color: $white1;
   }
 
   a.standard-button {
